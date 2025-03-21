@@ -1,0 +1,44 @@
+{% extends 'Fullstack_market/Base/base.html' %}
+{% load static %}
+
+{% block title %}Инвентарь Steam{% endblock title %}
+
+{% block aside_content %}
+<div class="pl-4 text-lg  hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fas fa-user"></i>
+    <a href="#">Личный кабинет</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-shield-halved"></i>
+    <a href="#">Безопасность</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    <a href="#">История сделок</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-table-cells-large"></i>
+    <a href="#">Инвентарь</a>
+</div>
+{% endblock aside_content %}
+
+{% block aside_hor_content %}
+<p class="text-md">Инвентарь Steam</p>
+<button class="bg-[#CC97B1] hover:bg-[#B387A1] transition duration-200 text-black px-2 rounded rounded-tr-2xl w-28 h-7 text-md">Выйти</button>
+{% endblock aside_hor_content %}
+
+{% block content %}
+<div class="pl-4 pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Карточка товара -->
+    <div class="bg-[#1A1A1D] bg-opacity-50 rounded-lg shadow-md overflow-hidden transition duration-200 transform hover:scale-105">
+        <div style="background: linear-gradient(#CC97B1, #b3a5ae)">
+            <img class="w-full h-48" src="{% static 'vulkan.png' %}" alt="Название товара">
+        </div>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold">Название товара</h2>
+            <p class="mt-2">Примерная цена: $19.99</p>
+        </div>
+    </div>
+    <!-- Конец карточки товара -->
+</div>
+{% endblock content %}

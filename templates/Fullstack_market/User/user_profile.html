@@ -1,0 +1,100 @@
+{% extends 'Fullstack_market/Base/base.html' %}
+{% load static %}
+
+{% block title %}Личный кабинет{% endblock title %}
+
+{% block aside_content %}
+<div class="pl-4 text-lg  hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fas fa-user"></i>
+    <a href="#">Личный кабинет</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-shield-halved"></i>
+    <a href="#">Безопасность</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    <a href="#">История сделок</a>
+</div>
+<div class="pl-4 text-lg hover:bg-[#B387A1] transition duration-200 space-x-2">
+    <i class="fa-solid fa-table-cells-large"></i>
+    <a href="#">Инвентарь</a>
+</div>
+{% endblock aside_content %}
+
+{% block aside_hor_content %}
+<p class="text-md">Личный кабинет</p>
+<button class="bg-[#CC97B1] hover:bg-[#B387A1] transition duration-200 text-black px-2 rounded rounded-tr-2xl w-28 h-7 text-md">Выйти</button>
+{% endblock aside_hor_content %}
+
+{% block content %}
+{# Карточка 1 #}
+<div class="grid grid-cols-2 gap-4 text-white pl-4 pt-4">
+    <div class="bg-[#1A1A1D] bg-opacity-75 rounded-lg p-4">
+        <h4 class="pb-2">Профиль</h4>
+        <div class="grid grid-cols-2">
+            <div class="flex flex-col items-center space-y-2">
+                <img src="{% static 'Assets/user.png' %}" alt="User avatar" class="w-24 h-24 rounded-full border border-white">
+                <p class="">Никнейм</p>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <p>Дата регистрации: <span>01.01.2023</span></p>
+                <hr class="my-2 border-gray-400">
+                <p>Количество сделок: <span>200</span></p>
+                <p>Рейтинг: <span>5.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    {# Карточка 2 #}
+    <div class="bg-[#1A1A1D] bg-opacity-75 rounded-lg p-4">
+        <h4 class="pb-2">Контактная информация</h4>
+        <div class="flex flex-col space-y-2 pr-2">
+            <div class="flex items-center justify-between">
+                <span>Эл.почта: maq****@mail.com</span>
+                <div class="space-x-2">
+                    <i class="fas fa-pencil-alt cursor-pointer hover:text-[#B387A1] transition duration-200"></i>
+                    <i class="fas fa-trash cursor-pointer hover:text-red-400 transition duration-200"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <span>Телеграмм: @sl******re</span>
+                <div class="space-x-2">
+                    <i class="fas fa-pencil-alt cursor-pointer hover:text-[#B387A1] transition duration-200"></i>
+                    <i class="fas fa-trash cursor-pointer hover:text-red-400 transition duration-200"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <span>Номер: +7 (967) *** 45 08</span>
+                <div class="space-x-2">
+                    <i class="fas fa-pencil-alt cursor-pointer hover:text-[#B387A1] transition duration-200"></i>
+                    <i class="fas fa-trash cursor-pointer hover:text-red-400 transition duration-200"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Карточка 3 #}
+    <div class="bg-[#1A1A1D] bg-opacity-75 rounded-lg col-span-2 p-4">
+        <h4 class="pb-2">Общая информация</h4>
+        <form action="" method="post" class="flex gap-4 text-sm items-center">
+            <label for="trade-link">Торговая ссылка:</label>
+            <input id="trade-link" class="bg-[#CC97B1] bg-opacity-80 p-1 rounded text-xs w-2/3 focus:outline-none" type="url" value="https://steamcommunity.com/tradeoffer/new/?partner=333838099&amp;token=HKw94Dyk"/>
+            <a href="#">Как найти?</a>
+            <button type="submit">Применить</button>
+        </form>
+        <hr class="my-2 border-gray-400">
+        <div class="space-y-2">
+            <div class="flex gap-6 items-end">
+                <span>Ссылка продавца: https://skinstrade.ru/?sellerid=12345678</span>
+                <button>Скопировать</button>
+            </div>
+            <div>Steam ID64: 76561198294103827</div>
+            <div class="flex items-end">
+                <span>Разрешение:</span>
+                {#placeholder#}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

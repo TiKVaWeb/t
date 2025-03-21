@@ -1,0 +1,207 @@
+.button {
+    filter: url("#dripping");
+}
+
+.bubbles {
+    position: absolute;
+    inset: 0;
+    width: calc(100% - 25px);
+    z-index: -1;
+    transition: background-color 0.2s ease 0.1s;
+}
+
+.bubbles .bubble {
+    background-color: #CC97B1;
+    border-radius: 50%;
+    position: absolute;
+    inset-block-end: 0;
+    width: 25px;
+    aspect-ratio: 1;
+    transition: background-color 0.2s ease 0.10s;
+}
+
+.button:hover .bubbles .bubble {
+    background-color: #B387A1;
+
+}
+
+.bubbles .bubble:nth-child(1) {
+    inset-inline-start: 31%;
+    animation: move-1 3.04s infinite, morph 3.02s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+.bubbles .bubble:nth-child(2) {
+    inset-inline-start: 49%;
+    animation: move-2 3.08s infinite, morph 3.04s linear infinite alternate;
+    animation-delay: 0.4s;
+}
+
+.bubbles .bubble:nth-child(3) {
+    inset-inline-start: 15%;
+    animation: move-3 3.12s infinite, morph 3.06s linear infinite alternate;
+    animation-delay: 0.6s;
+}
+
+.bubbles .bubble:nth-child(4) {
+    inset-inline-start: 30%;
+    animation: move-4 3.16s infinite, morph 3.08s linear infinite alternate;
+    animation-delay: 0.8s;
+}
+
+.bubbles .bubble:nth-child(5) {
+    inset-inline-start: 35%;
+    animation: move-5 3.2s infinite, morph 3.1s linear infinite alternate;
+    animation-delay: 1s;
+}
+
+.bubbles .bubble:nth-child(6) {
+    inset-inline-start: 22%;
+    animation: move-6 3.24s infinite, morph 3.12s linear infinite alternate;
+    animation-delay: 1.2s;
+}
+
+.bubbles .bubble:nth-child(7) {
+    inset-inline-start: 14%;
+    animation: move-7 3.28s infinite, morph 3.14s linear infinite alternate;
+    animation-delay: 1.4s;
+}
+
+.bubbles .bubble:nth-child(8) {
+    inset-inline-start: 86%;
+    animation: move-8 3.32s infinite, morph 3.16s linear infinite alternate;
+    animation-delay: 1.6s;
+}
+
+.bubbles .bubble:nth-child(9) {
+    inset-inline-start: 84%;
+    animation: move-9 3.36s infinite, morph 3.18s linear infinite alternate;
+    animation-delay: 1.8s;
+}
+
+.bubbles .bubble:nth-child(10) {
+    inset-inline-start: 58%;
+    animation: move-10 3.4s infinite, morph 3.2s linear infinite alternate;
+    animation-delay: 2s;
+}
+
+@keyframes move-1 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 56px) rotate(223deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-2 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 104px) rotate(230deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-3 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 121px) rotate(29deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-4 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 117px) rotate(130deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-5 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 105px) rotate(88deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-6 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 113px) rotate(142deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-7 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 64px) rotate(291deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-8 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 82px) rotate(88deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-9 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 116px) rotate(281deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+@keyframes move-10 {
+    0% {
+        transform: translate(0, 0) scaleX(0.85);
+    }
+    99% {
+        transform: translate(0, 76px) rotate(150deg);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
